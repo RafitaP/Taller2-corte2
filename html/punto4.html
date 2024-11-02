@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio # 4</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="code">Código</label>
+      <input type="text" id="code" />
+      <label for="name">Nombre</label>
+      <input type="text" id="name" />
+      <input type="submit" value="Agregar" />
+    </form>
+
+    <table id="table" border="1px">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      const form = document.querySelector("form");
+      const code = document.getElementById("code");
+      const name = document.getElementById("name");
+      const table = document.querySelector("table tbody");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const tr = document.createElement("tr");
+        const tdCode = document.createElement("td");
+        const tdName = document.createElement("td");
+        tdCode.textContent = code.value;
+        tdName.textContent = name.value;
+        tr.appendChild(tdCode);
+        tr.appendChild(tdName);
+        table.appendChild(tr);
+      });
+    </script>
+  </body>
+</html>

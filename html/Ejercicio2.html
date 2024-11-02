@@ -1,0 +1,106 @@
+<!-- 5)	Con base a la página proporcionada (Ejercicio2.html). Agregar la funcionalidad para que al dar click sobre “Ocultar Sección” se oculte el párrafo correspondiente. -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0152)http://dis.um.es/~lopezquesada/documentos/IES_1314/IAW/curso/UT7/libroswebjavascript/www.librosweb.es/javascript/ejercicios/ejercicio14/ejercicio14.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Ejercicio 14 - DOM b�sico y atributos XHTML</title>
+
+
+  </head>
+
+  <body>
+    <p id="contenidos_1">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+      vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+      commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+      vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+      aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+      elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+      rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio
+      urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit
+      amet, consectetuer adipiscing elit. Duis scelerisque.
+    </p>
+    <a id="enlace_1" href="">Ocultar contenidos</a>
+
+    <br />
+
+    <p id="contenidos_2">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+      vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+      commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+      vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+      aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+      elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+      rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio
+      urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit
+      amet, consectetuer adipiscing elit. Duis scelerisque.
+    </p>
+    <a id="enlace_2" href="">Ocultar contenidos</a>
+
+    <br />
+
+    <p id="contenidos_3">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+      vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+      commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+      vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+      aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+      elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+      rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio
+      urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit
+      amet, consectetuer adipiscing elit. Duis scelerisque.
+    </p>
+    <a id="enlace_3" href="">Ocultar contenidos</a>
+
+
+    <script type="text/javascript">
+      const enlace1 = document.getElementById("enlace_1");
+      const enlace2 = document.getElementById("enlace_2");
+      const enlace3 = document.getElementById("enlace_3");
+
+      const contenidos1 = document.getElementById("contenidos_1");
+      const contenidos2 = document.getElementById("contenidos_2");
+      const contenidos3 = document.getElementById("contenidos_3");
+
+
+      enlace1.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (contenidos1.style.display === "none") {
+          contenidos1.style.display = "block";
+          enlace1.textContent = "Ocultar contenidos";
+        } else {
+          contenidos1.style.display = "none";
+          enlace1.textContent = "Mostrar contenidos";
+        }
+      });
+
+      enlace2.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (contenidos2.style.display === "none") {
+          contenidos2.style.display = "block";
+          enlace2.textContent = "Ocultar contenidos";
+        } else {
+          contenidos2.style.display = "none";
+          enlace2.textContent = "Mostrar contenidos";
+        }
+      });
+
+      enlace3.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (contenidos3.style.display === "none") {
+          contenidos3.style.display = "block";
+          enlace3.textContent = "Ocultar contenidos";
+        } else {
+          contenidos3.style.display = "none";
+          enlace3.textContent = "Mostrar contenidos";
+        }
+      });
+
+      
+    </script>
+  
+  </body>
+</html>

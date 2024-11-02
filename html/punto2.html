@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio # 2</title>
+  </head>
+  <body>
+    <form action="#">
+      <label for="dollar">Dollar</label>
+      <input type="number" id="dollar" />
+      <input type="submit" value="Convertir" />
+      <br /><br />
+      <label for="peso">Peso</label>
+      <input type="text" id="peso" disabled />
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      const dollar = document.getElementById("dollar");
+      const peso = document.getElementById("peso");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const trm = 3800;
+        const dollarValue = dollar.value;
+        const result = dollarValue * trm;
+        peso.value = result;
+      });
+    </script>
+  </body>
+</html>

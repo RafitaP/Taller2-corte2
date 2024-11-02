@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio # 3</title>
+  </head>
+  <body>
+    <!-- 3)	Hacer un formulario que convierta de grados centígrados a grados Fahrenheit. Para ello deberé multiplicar por 9/5 y sumar 32. Tener en cuenta que 30 grados centígrados son 86 grados Fahrenheit. Debe mostrar el resultado en una caja de texto. -->
+  
+    <form action="#">
+      <label for="celsius">Celsius</label>
+      <input type="number" id="celsius" />
+      <input type="submit" value="Convertir" />
+      <br /><br />
+      <label for="fahrenheit">Fahrenheit</label>
+      <input type="text" id="fahrenheit" disabled />
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      const celsius = document.getElementById("celsius");
+      const fahrenheit = document.getElementById("fahrenheit");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const celsiusValue = celsius.value;
+        const result = celsiusValue * 9/5 + 32;
+        fahrenheit.value = result;
+      });
+    </script>
+  </body>
+</html>
